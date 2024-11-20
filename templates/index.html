@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trò Chơi 2048</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <div class="menu-screen">
+        <div class="hinh-container">
+            <img src="static/assets/images/gameled.png" alt="2048 Logo" class="logo">
+        </div>
+        <div class="logo-container">
+            <img src="static/assets/images/logo.png" alt="2048 Logo" class="logo">
+        </div>
+
+        <div class="button-container">
+            <button id="playGame" class="menu-button">Chơi Game</button>
+            <button id="rank" class="menu-button">Xếp Hạng</button>
+        </div>
+
+    </div>
+
+    <div class="username-container" style="display: none;">
+        <label for="username">Nhập tên:</label>
+        <input type="text" id="username" placeholder="Tên của bạn" class="username-input">
+        <button id="startGame" class="menu-button">Bắt đầu chơi</button>
+    </div>
+
+  <div class="game-container" style="display: none;">
+    <div id="score">Điểm: 0</div>
+    <div id="highScore">Điểm cao nhất: 0</div>
+    <div id="board"></div>
+    <button id="newGame">Trò Chơi Mới</button>
+    <button id="backToMenu" class="menu-button">Quay Lại</button>
+</div>
+<div id="gameOverMessage" style="display: none;">
+    <h2>Game Over!</h2>
+    <p>Điểm số của bạn là: <span id="finalScore"></span></p>
+    <button type="button" onclick="startNewGame()">Chơi lại</button>
+</div>
+
+</body>
+</html>
