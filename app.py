@@ -131,6 +131,7 @@ def move_down():
             else:
                 ds[i][j] = 0
     return moved
+
 def check_win():
     for row in ds:
         if 2048 in row:
